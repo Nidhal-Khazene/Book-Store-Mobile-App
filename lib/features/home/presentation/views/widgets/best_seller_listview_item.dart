@@ -1,3 +1,5 @@
+import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.dart';
@@ -23,6 +25,36 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
+        ),
+        const SizedBox(width: 30),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * .5,
+              child: Text(
+                "Harry Potter and The Goblet of Fire",
+                style: Styles.textStyle20.copyWith(
+                  fontFamily: kFontGTSectraFine,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            const SizedBox(height: 5),
+            Text("J.K. Rowling", style: Styles.textStyle14),
+            const SizedBox(height: 5),
+            Row(
+              children: [
+                Text(
+                  "19.99 €",
+                  style: Styles.textStyle20.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     );
