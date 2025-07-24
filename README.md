@@ -1,4 +1,4 @@
-# Bookly app
+# Book Store Mobile App
 
 A new Flutter project.
 
