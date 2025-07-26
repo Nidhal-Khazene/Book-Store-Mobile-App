@@ -1,9 +1,9 @@
-import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/app_router.dart';
-import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gramaz_app/constants.dart';
+import 'package:gramaz_app/core/utils/app_router.dart';
+import 'package:gramaz_app/core/utils/styles.dart';
+import 'package:gramaz_app/features/home/presentation/views/widgets/book_rating.dart';
 
 import '../../../../../core/utils/assets.dart';
 
@@ -43,15 +43,16 @@ class BookListViewItem extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * .5,
                   child: Text(
                     "Harry Potter and The Goblet of Fire",
-                    style: Styles.textStyle20.copyWith(
-                      fontFamily: kFontGTSectraFine,
-                    ),
+                    style: Styles.textStyle20.copyWith(),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const SizedBox(height: 5),
-                Text("J.K. Rowling", style: Styles.textStyle14),
+                Text(
+                  "J.K. Rowling",
+                  style: Styles.textStyle14.copyWith(color: kSecondaryColor),
+                ),
                 const SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

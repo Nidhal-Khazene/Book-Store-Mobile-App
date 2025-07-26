@@ -1,3 +1,4 @@
+import 'package:gramaz_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -13,11 +14,11 @@ class CustomAppBarBookDetails extends StatelessWidget {
           onPressed: () {
             GoRouter.of(context).pop();
           },
-          icon: const Icon(Icons.close),
+          icon: const Icon(Icons.close, color: kSplashColor),
         ),
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.shopping_cart_outlined),
+          icon: const Icon(Icons.shopping_cart_outlined, color: kSplashColor),
         ),
       ],
     );

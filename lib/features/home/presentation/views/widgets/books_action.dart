@@ -1,4 +1,5 @@
-import 'package:bookly_app/core/widgets/custom_button.dart';
+import 'package:gramaz_app/constants.dart';
+import 'package:gramaz_app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class BooksAction extends StatelessWidget {
@@ -12,7 +13,7 @@ class BooksAction extends StatelessWidget {
         children: [
           Expanded(
             child: CustomButton(
-              backgroundColor: Colors.white,
+              backgroundColor: kSplashColor,
               title: "19.99€",
               titleColor: Colors.black,
               borderRadius: BorderRadius.only(
@@ -23,7 +24,7 @@ class BooksAction extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
-              backgroundColor: Color(0xffEF8262),
+              backgroundColor: Color(0xff665230),
               title: "Free preview",
               titleColor: Colors.white,
               borderRadius: BorderRadius.only(

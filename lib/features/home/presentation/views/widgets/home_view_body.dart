@@ -1,5 +1,5 @@
-import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_listview.dart';
 import 'package:flutter/material.dart';
+import 'package:gramaz_app/features/home/presentation/views/widgets/best_seller_listview.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
@@ -20,9 +20,21 @@ class HomeViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomAppBar(),
+                Text(
+                  "For you",
+                  style: Styles.textStyle16.copyWith(
+                    fontFamily: kFontClashDisplay,
+                  ),
+                ),
+                const SizedBox(height: 21),
                 FeaturedListView(),
                 const SizedBox(height: 52),
-                Text("Best Seller", style: Styles.textStyle18),
+                Text(
+                  "Best Seller",
+                  style: Styles.textStyle16.copyWith(
+                    fontFamily: kFontClashDisplay,
+                  ),
+                ),
                 const SizedBox(height: 21),
               ],
             ),

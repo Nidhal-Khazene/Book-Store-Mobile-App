@@ -1,4 +1,5 @@
-import 'package:bookly_app/features/splash/presentation/views/widgets/splash_view_body.dart';
+import 'package:gramaz_app/constants.dart';
+import 'package:gramaz_app/features/splash/presentation/views/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatelessWidget {
@@ -6,6 +7,6 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SplashViewBody());
+    return Scaffold(backgroundColor: kSplashColor, body: SplashViewBody());
   }
 }

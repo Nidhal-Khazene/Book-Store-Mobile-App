@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/home/presentation/views/widgets/similar_list_view.dart';
+import 'package:gramaz_app/features/home/presentation/views/widgets/similar_list_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';

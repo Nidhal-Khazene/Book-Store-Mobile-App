@@ -1,14 +1,14 @@
-import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/app_router.dart';
+import 'package:gramaz_app/constants.dart';
+import 'package:gramaz_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(BooklyApp());
+  runApp(GramazApp());
 }
 
-class BooklyApp extends StatelessWidget {
-  BooklyApp({super.key});
+class GramazApp extends StatelessWidget {
+  const GramazApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,9 @@ class BooklyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kPrimaryColor,
-        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+        textTheme: GoogleFonts.interTextTheme(
+          ThemeData.dark().textTheme,
+        ).apply(bodyColor: kSplashColor, displayColor: kSplashColor),
       ),
     );
   }

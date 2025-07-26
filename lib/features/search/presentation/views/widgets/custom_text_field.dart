@@ -1,3 +1,4 @@
+import 'package:gramaz_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -10,11 +11,12 @@ class CustomTextField extends StatelessWidget {
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
         hintText: "Search",
+        hintStyle: TextStyle(color: kSplashColor),
         suffixIcon: Opacity(
           opacity: .8,
           child: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search, size: 32),
+            icon: Icon(Icons.search, size: 32, color: kSplashColor),
           ),
         ),
       ),
@@ -23,7 +25,7 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
+      borderSide: BorderSide(color: kSplashColor),
       borderRadius: BorderRadius.circular(8),
     );
   }

@@ -14,7 +14,10 @@ class SlidingText extends StatelessWidget {
         child: Text(
           "Read Free Books",
           textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            color: Color(0xff0B8C7C),
+          ),
         ),
       ),
     );

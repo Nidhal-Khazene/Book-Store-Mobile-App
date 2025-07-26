@@ -1,6 +1,6 @@
-import 'package:bookly_app/core/utils/app_router.dart';
-import 'package:bookly_app/core/utils/assets.dart';
-import 'package:bookly_app/features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:gramaz_app/core/utils/app_router.dart';
+import 'package:gramaz_app/core/utils/assets.dart';
+import 'package:gramaz_app/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -35,8 +35,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo),
-        const SizedBox(height: 4),
+        Image.asset(AssetsData.splashLogo, height: 60),
+        const SizedBox(height: 25),
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
@@ -56,11 +56,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHome() {
     Future.delayed(Duration(seconds: 2), () {
-      // Get.to(
-      //   () => const HomeView(),
-      //   transition: Transition.fade,
-      //   duration: kTransitionDuration,
-      // );
       GoRouter.of(context).push(AppRouter.kHomeViewRoute);
     });
   }
