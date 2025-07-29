@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:gramaz_app/core/errors/failures.dart';
 import 'package:gramaz_app/core/utils/api_service.dart';
 import 'package:gramaz_app/features/home/data/models/book_model/book_model.dart';
@@ -22,7 +23,10 @@ class HomeRepoImplementation extends HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServiceFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioError(e));
+      }
+      return left(ServerFailure(errMessage: e.toString()));
     }
   }
 
