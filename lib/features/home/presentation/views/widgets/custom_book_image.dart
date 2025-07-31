@@ -1,5 +1,5 @@
-import 'package:gramaz_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:gramaz_app/core/utils/assets.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({super.key});

@@ -22,7 +22,8 @@ class GramazApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FeaturedBooksCubit(getIt.get<HomeRepoImplementation>()),
+              FeaturedBooksCubit(getIt.get<HomeRepoImplementation>())
+                ..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) =>
