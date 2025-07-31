@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/assets.dart';
 
 class CustomBookImage extends StatelessWidget {
-  const CustomBookImage({super.key});
-
+  const CustomBookImage({super.key, required this.image});
+  final String image;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -11,10 +10,7 @@ class CustomBookImage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(AssetsData.testImage),
-          ),
+          image: DecorationImage(fit: BoxFit.fill, image: NetworkImage(image)),
         ),
       ),
     );

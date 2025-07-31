@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gramaz_app/core/utils/assets.dart';
 
 import 'custom_book_image.dart';
 
@@ -14,7 +15,7 @@ class SimilarListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(right: 12),
-            child: CustomBookImage(),
+            child: CustomBookImage(image: AssetsData.tempImage),
           );
         },
       ),

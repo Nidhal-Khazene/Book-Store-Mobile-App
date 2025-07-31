@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
@@ -15,7 +16,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: CustomBookImage(),
+          child: CustomBookImage(image: AssetsData.tempImage),
         ),
         const SizedBox(height: 45),
         Text("The Jungle Book", style: Styles.textStyle30),
