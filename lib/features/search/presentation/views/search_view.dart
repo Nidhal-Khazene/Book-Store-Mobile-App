@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/constants.dart';
 import 'package:gramaz_app/features/search/presentation/views/widgets/search_view_body.dart';
 
 class SearchView extends StatelessWidget {
@@ -7,12 +6,6 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: kPrimaryColor,
-        iconTheme: IconThemeData(color: kSplashColor),
-      ),
-      body: SearchViewBody(),
-    );
+    return Scaffold(body: SafeArea(child: SearchViewBody()));
   }
 }

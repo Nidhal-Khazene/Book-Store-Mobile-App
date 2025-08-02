@@ -1,5 +1,6 @@
-import 'package:gramaz_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gramaz_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key});
@@ -17,6 +18,15 @@ class CustomTextField extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon: Icon(Icons.search, size: 32, color: kSplashColor),
+          ),
+        ),
+        prefixIcon: Opacity(
+          opacity: .8,
+          child: IconButton(
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back, size: 32, color: kSplashColor),
           ),
         ),
       ),
