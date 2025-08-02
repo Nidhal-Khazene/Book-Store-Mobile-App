@@ -43,7 +43,7 @@ class BookListViewItem extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  bookModel.volumeInfo.authors!.first,
+                  bookModel.volumeInfo.authors?.first ?? "unknown",
                   style: Styles.textStyle14.copyWith(color: kSecondaryColor),
                 ),
                 const SizedBox(height: 5),

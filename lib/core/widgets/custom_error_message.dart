@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/styles.dart';
+import 'package:gramaz_app/constants.dart';
+
+import '../utils/styles.dart';
 
 class CustomErrorMessage extends StatelessWidget {
   const CustomErrorMessage({super.key, required this.errMessage});
@@ -7,9 +9,12 @@ class CustomErrorMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SnackBar(
-      duration: Duration(seconds: 4),
-      content: Text(errMessage, style: Styles.textStyle18),
+    return Center(
+      child: Text(
+        errMessage,
+        style: Styles.textStyle18.copyWith(color: kSplashColor),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
