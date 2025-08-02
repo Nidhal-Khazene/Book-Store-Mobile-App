@@ -14,6 +14,7 @@ class HomeViewBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kPadding30),
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
@@ -30,7 +31,7 @@ class HomeViewBody extends StatelessWidget {
                 FeaturedListView(),
                 const SizedBox(height: 52),
                 Text(
-                  "Best Seller",
+                  "Newest  books",
                   style: Styles.textStyle16.copyWith(
                     fontFamily: kFontClashDisplay,
                   ),
@@ -40,7 +41,7 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
           const SliverFillRemaining(child: BestSellerListView()),
-          const SliverToBoxAdapter(child: SizedBox(height: 50)),
+          const SliverToBoxAdapter(child: SizedBox(height: 100)),
         ],
       ),
     );

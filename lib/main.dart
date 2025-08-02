@@ -27,7 +27,8 @@ class GramazApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) =>
-              NewestBooksCubit(getIt.get<HomeRepoImplementation>()),
+              NewestBooksCubit(getIt.get<HomeRepoImplementation>())
+                ..fetchNewestBooks(),
         ),
       ],
       child: MaterialApp.router(
