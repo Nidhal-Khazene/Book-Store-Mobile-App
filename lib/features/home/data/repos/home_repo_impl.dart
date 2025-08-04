@@ -32,7 +32,7 @@ class HomeRepoImplementation extends HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
-      var data = await apiService.get(endPoint: "volumes?q=programming");
+      var data = await apiService.get(endPoint: "volumes?q=Programming");
       List<BookModel> books = [];
       for (var item in data["items"]) {
         books.add(BookModel.fromJson(item));
