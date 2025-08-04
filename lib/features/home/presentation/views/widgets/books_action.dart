@@ -32,7 +32,7 @@ class BooksAction extends StatelessWidget {
               onPressed: () async {
                 await customLaunchUrl(
                   context,
-                  "book.volumeInfo.previewLink" ?? "",
+                  book.volumeInfo.previewLink ?? "",
                 );
               },
               backgroundColor: const Color(0xff665230),
