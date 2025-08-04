@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gramaz_app/constants.dart';
 import 'package:gramaz_app/core/widgets/custom_button.dart';
-import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../core/utils/functions/custom_launcher_url.dart';
 import '../../../data/models/book_model/book_model.dart';
 
 class BooksAction extends StatelessWidget {
@@ -30,20 +30,10 @@ class BooksAction extends StatelessWidget {
           Expanded(
             child: CustomButton(
               onPressed: () async {
-                Uri url = Uri.parse(book.volumeInfo.previewLink ?? "");
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(
-                    url,
-                    mode: LaunchMode.externalApplication,
-                    webViewConfiguration: const WebViewConfiguration(
-                      enableJavaScript: true,
-                      enableDomStorage: true,
-                      headers: <String, String>{},
-                    ),
-                  );
-                } else {
-                  throw Exception('Could not launch $url');
-                }
+                await customLaunchUrl(
+                  context,
+                  "book.volumeInfo.previewLink" ?? "",
+                );
               },
               backgroundColor: const Color(0xff665230),
               title: getText(book),
