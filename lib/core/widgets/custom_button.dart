@@ -1,5 +1,5 @@
-import 'package:gramaz_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:gramaz_app/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -8,19 +8,21 @@ class CustomButton extends StatelessWidget {
     required this.title,
     required this.titleColor,
     this.borderRadius,
+    this.onPressed,
   });
 
   final Color backgroundColor;
   final Color titleColor;
   final String title;
   final BorderRadiusGeometry? borderRadius;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 48,
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: TextButton.styleFrom(
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(

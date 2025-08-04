@@ -6,7 +6,9 @@ import 'package:gramaz_app/features/home/presentation/views/widgets/book_details
 
 class BookDetailsView extends StatefulWidget {
   const BookDetailsView({super.key, required this.book});
+
   final BookModel book;
+
   @override
   State<BookDetailsView> createState() => _BookDetailsViewState();
 }
@@ -22,6 +24,6 @@ class _BookDetailsViewState extends State<BookDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BookDetailsViewBody());
+    return Scaffold(body: BookDetailsViewBody(book: widget.book));
   }
 }

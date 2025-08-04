@@ -1,5 +1,5 @@
-import 'package:gramaz_app/features/home/presentation/views/widgets/similar_list_view.dart';
 import 'package:flutter/material.dart';
+import 'package:gramaz_app/features/home/presentation/views/widgets/similar_list_view.dart';
 
 import '../../../../../core/utils/styles.dart';
 
@@ -8,11 +8,11 @@ class SimilarBooksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("You can also like", style: Styles.textStyle18),
-        const SizedBox(height: 17),
+        Text("You can also like", style: Styles.textStyle18),
+        SizedBox(height: 17),
         SimilarListView(),
       ],
     );

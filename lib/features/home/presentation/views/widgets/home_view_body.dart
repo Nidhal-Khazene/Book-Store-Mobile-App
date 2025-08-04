@@ -12,15 +12,15 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: kPadding30),
+      padding: const EdgeInsets.symmetric(horizontal: kPadding30),
       child: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomAppBar(),
+                const CustomAppBar(),
                 Text(
                   "For you",
                   style: Styles.textStyle16.copyWith(
@@ -28,7 +28,7 @@ class HomeViewBody extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 21),
-                FeaturedListView(),
+                const FeaturedListView(),
                 const SizedBox(height: 52),
                 Text(
                   "Newest  books",

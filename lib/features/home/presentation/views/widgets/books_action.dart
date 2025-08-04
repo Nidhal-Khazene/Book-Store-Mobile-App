@@ -1,20 +1,25 @@
+import 'package:flutter/material.dart';
 import 'package:gramaz_app/constants.dart';
 import 'package:gramaz_app/core/widgets/custom_button.dart';
-import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../../data/models/book_model/book_model.dart';
 
 class BooksAction extends StatelessWidget {
-  const BooksAction({super.key});
+  const BooksAction({super.key, required this.book});
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: CustomButton(
               backgroundColor: kSplashColor,
-              title: "19.99€",
+              title: "Free",
               titleColor: Colors.black,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(16),
@@ -24,10 +29,26 @@ class BooksAction extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
-              backgroundColor: Color(0xff665230),
-              title: "Free preview",
+              onPressed: () async {
+                Uri url = Uri.parse(book.volumeInfo.previewLink ?? "");
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(
+                    url,
+                    mode: LaunchMode.externalApplication,
+                    webViewConfiguration: const WebViewConfiguration(
+                      enableJavaScript: true,
+                      enableDomStorage: true,
+                      headers: <String, String>{},
+                    ),
+                  );
+                } else {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              backgroundColor: const Color(0xff665230),
+              title: getText(book),
               titleColor: Colors.white,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(16),
                 bottomRight: Radius.circular(16),
               ),
@@ -36,5 +57,13 @@ class BooksAction extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String getText(BookModel book) {
+    if (book.volumeInfo.previewLink == null) {
+      return "Not Available";
+    } else {
+      return "Preview";
+    }
   }
 }

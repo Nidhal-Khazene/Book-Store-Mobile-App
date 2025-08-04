@@ -16,7 +16,7 @@ class CustomBookImage extends StatelessWidget {
           imageUrl: image,
           fit: BoxFit.fill,
           errorWidget: (context, url, error) =>
-              Icon(Icons.error_outline, size: 32),
+              const Icon(Icons.error_outline, size: 32),
         ),
       ),
     );

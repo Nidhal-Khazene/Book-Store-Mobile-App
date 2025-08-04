@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:gramaz_app/features/home/data/models/book_model/book_model.dart';
 
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
 import 'custom_book_image.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+  const BookDetailsSection({super.key, required this.book});
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -16,22 +18,28 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: CustomBookImage(image: AssetsData.tempImage),
+          child: CustomBookImage(image: book.volumeInfo.imageLinks.thumbnail),
         ),
         const SizedBox(height: 45),
-        Text("The Jungle Book", style: Styles.textStyle30),
+        Center(
+          child: Text(
+            book.volumeInfo.title ?? "Unknown",
+            style: Styles.textStyle30,
+            textAlign: TextAlign.center,
+          ),
+        ),
         const SizedBox(height: 9),
         Opacity(
           opacity: 0.7,
           child: Text(
-            "Rudyard Kipling",
+            book.volumeInfo.authors?.first ?? "Unknown",
             style: Styles.textStyle18.copyWith(fontStyle: FontStyle.italic),
           ),
         ),
         const SizedBox(height: 12),
         const BookRating(mainAxisAlignment: MainAxisAlignment.center),
         const SizedBox(height: 37.6),
-        BooksAction(),
+        BooksAction(book: book),
       ],
     );
   }

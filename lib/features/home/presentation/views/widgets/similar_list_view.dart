@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gramaz_app/core/utils/assets.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gramaz_app/core/utils/app_router.dart';
 import 'package:gramaz_app/core/widgets/custom_error_message.dart';
 import 'package:gramaz_app/core/widgets/custom_loading_indicator.dart';
 import 'package:gramaz_app/features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
@@ -18,11 +19,22 @@ class SimilarListView extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * .15,
             child: ListView.builder(
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.only(right: 12),
-                  child: CustomBookImage(image: AssetsData.tempImage),
+                  padding: const EdgeInsets.only(right: 12),
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(
+                        AppRouter.kBookDetailsViewRoute,
+                        extra: state.books[index],
+                      );
+                    },
+                    child: CustomBookImage(
+                      image: state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
+                  ),
                 );
               },
             ),
@@ -30,7 +42,7 @@ class SimilarListView extends StatelessWidget {
         } else if (state is SimilarBooksFailure) {
           return CustomErrorMessage(errMessage: state.errMessage);
         } else {
-          return CustomLoadingIndicator();
+          return const CustomLoadingIndicator();
         }
       },
     );

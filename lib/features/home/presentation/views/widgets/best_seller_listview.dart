@@ -20,7 +20,7 @@ class BestSellerListView extends StatelessWidget {
             itemCount: state.books.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.symmetric(vertical: 10),
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 child: BookListViewItem(bookModel: state.books[index]),
               );
             },
@@ -28,7 +28,7 @@ class BestSellerListView extends StatelessWidget {
         } else if (state is NewestBooksFailure) {
           return CustomErrorMessage(errMessage: state.errMessage);
         } else {
-          return CustomLoadingIndicator();
+          return const CustomLoadingIndicator();
         }
       },
     );

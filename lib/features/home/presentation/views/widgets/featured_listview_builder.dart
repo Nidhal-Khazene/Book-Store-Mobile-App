@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gramaz_app/core/utils/app_router.dart';
 import 'package:gramaz_app/core/widgets/custom_error_message.dart';
 import 'package:gramaz_app/core/widgets/custom_loading_indicator.dart';
 import 'package:gramaz_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
@@ -22,8 +24,16 @@ class FeaturedListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 12),
-                  child: CustomBookImage(
-                    image: state.books[index].volumeInfo.imageLinks.thumbnail,
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(
+                        AppRouter.kBookDetailsViewRoute,
+                        extra: state.books[index],
+                      );
+                    },
+                    child: CustomBookImage(
+                      image: state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   ),
                 );
               },
