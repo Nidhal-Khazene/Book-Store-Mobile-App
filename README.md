@@ -1,4 +1,13 @@
 # Book Store Mobile App
 
-A new Flutter project.
+Gramaz Mobile App is a book store app with Google Book API Integration.
 
+![gramaz1](assets/images/preview/gramaz1.png)
+![gramaz2](assets/images/preview/gramaz2.png)
+![gramaz3](assets/images/preview/gramaz3.png)
+![gramaz4](assets/images/preview/gramaz4.png)
+![gramaz5](assets/images/preview/gramaz5.png)
+
+# Google Book API
+
+https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=subject:Programming&Sorting=newests
