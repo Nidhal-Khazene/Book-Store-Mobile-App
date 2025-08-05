@@ -1,7 +1,7 @@
 # Book Store Mobile App
 
-Gramaz Mobile App is a Flutter Book Store with Google Book API Integration and using Bloc State
-Management and MVVM Architecture.
+The Gramaz Mobile App is a Flutter bookstore with Google Books API integration and uses Bloc state
+management and MVVM architecture.
 
 ![gramaz1](assets/images/preview/gramaz1.png)
 ![gramaz2](assets/images/preview/gramaz2.png)
