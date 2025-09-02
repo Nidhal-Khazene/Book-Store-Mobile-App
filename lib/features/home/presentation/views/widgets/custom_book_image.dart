@@ -1,10 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:story_nest/constants.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({super.key, required this.image});
 
-  final String image;
+  final String? image;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class CustomBookImage extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
         child: CachedNetworkImage(
-          imageUrl: image,
+          imageUrl: image ?? kDefaultImageUrl,
           fit: BoxFit.fill,
           errorWidget: (context, url, error) =>
               const Icon(Icons.error_outline, size: 32),

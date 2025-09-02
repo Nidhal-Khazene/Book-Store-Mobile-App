@@ -7,22 +7,30 @@ class BookRating extends StatelessWidget {
   const BookRating({
     super.key,
     this.mainAxisAlignment = MainAxisAlignment.start,
+    required this.rating,
+    required this.countRating,
   });
 
   final MainAxisAlignment mainAxisAlignment;
+  final num? rating;
+  final int? countRating;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [
-        Icon(FontAwesomeIcons.solidStar, color: Color(0xffFFDD4F), size: 16),
+        const Icon(
+          FontAwesomeIcons.solidStar,
+          color: Color(0xffFFDD4F),
+          size: 16,
+        ),
         const SizedBox(width: 6.3),
-        Text("0", style: Styles.textStyle16),
+        Text("$rating", style: Styles.textStyle16),
         const SizedBox(width: 7),
         Opacity(
           opacity: .5,
-          child: Text("( 0 )", style: Styles.textStyle14.copyWith()),
+          child: Text("( $countRating )", style: Styles.textStyle14.copyWith()),
         ),
       ],
     );

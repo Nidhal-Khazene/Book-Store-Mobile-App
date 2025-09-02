@@ -32,7 +32,7 @@ class BooksAction extends StatelessWidget {
               onPressed: () async {
                 await customLaunchUrl(
                   context,
-                  book.volumeInfo.previewLink ?? "",
+                  book.volumeInfo?.previewLink ?? "",
                 );
               },
               backgroundColor: const Color(0xff665230),
@@ -50,7 +50,7 @@ class BooksAction extends StatelessWidget {
   }
 
   String getText(BookModel book) {
-    if (book.volumeInfo.previewLink == null) {
+    if (book.volumeInfo?.previewLink == null) {
       return "Not Available";
     } else {
       return "Preview";

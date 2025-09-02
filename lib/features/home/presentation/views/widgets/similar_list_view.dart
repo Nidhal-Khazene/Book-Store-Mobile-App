@@ -32,7 +32,8 @@ class SimilarListView extends StatelessWidget {
                       );
                     },
                     child: CustomBookImage(
-                      image: state.books[index].volumeInfo.imageLinks.thumbnail,
+                      image:
+                          state.books[index].volumeInfo?.imageLinks?.thumbnail,
                     ),
                   ),
                 );
