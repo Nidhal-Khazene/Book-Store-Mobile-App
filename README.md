@@ -31,10 +31,12 @@ StoryNest is a sleek and modern mobile book store application built with Flutter
 |:---------------------------------------------------------------------------:|:--------------------------------------------------------------------------------:|
 | <img src="assets/images/preview/splash_screen.png" alt="Splash" width="250"/> | <img src="assets/images/preview/home_screen.png" alt="Home Screen" width="250"/> |
 
-|                                    Search Screen                                     |                                  Details Screen                                   |                                    Book Preview Screen                                    |
-|:------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------:|
-| <img src="assets/images/preview/search_screen.png" alt="Search Screen" width="250"/> | <img src="assets/preview/details_screen.png" alt="Details Screen" width="250"/> | <img src="assets/images/preview/book_preview.png" alt="Book Preview Screen" width="250"/> |
-
+|                                    Search Screen                                     |                                  Details Screen                                   |
+|:------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|
+| <img src="assets/images/preview/search_screen.png" alt="Search Screen" width="250"/> | <img src="assets/preview/details_screen.png" alt="Details Screen" width="250"/> |
+|                                    Book Preview Screen                                    |
+|:-----------------------------------------------------------------------------------------:|
+| <img src="assets/images/preview/book_preview.png" alt="Book Preview Screen" width="250"/> |
 
 ## 🏗️ Architecture & Tech Stack
 
