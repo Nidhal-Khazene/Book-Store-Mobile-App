@@ -3,6 +3,10 @@
 
 StoryNest is a sleek and modern mobile book store application built with Flutter. It leverages the Google Books API to provide users with a seamless experience for discovering, searching, and previewing a vast collection of books. The app is designed with a clean architecture, ensuring scalability and maintainability.
 
+## Google API Link
+
+*   **[Google API Link](https://www.googleapis.com/books/v1/volumes?q=Programming)**
+
 ## ✨ Features
 
 - **Splash Screen:** An animated entry point into the application.
@@ -20,6 +24,17 @@ StoryNest is a sleek and modern mobile book store application built with Flutter
     - View a list of "You can also like" books based on the current book's category.
 - **Robust State Management:** Utilizes BLoC (Cubit) for predictable and efficient state handling.
 - **Error Handling:** Gracefully handles API errors and network issues with user-friendly messages.
+
+## Screenshots
+
+|                                Splash Screen                                |                                   Home Screen                                    |
+|:---------------------------------------------------------------------------:|:--------------------------------------------------------------------------------:|
+| <img src="assets/images/preview/splash_screen.png" alt="Splash" width="250"/> | <img src="assets/images/preview/home_screen.png" alt="Home Screen" width="250"/> |
+
+|                                    Search Screen                                     |                                  Details Screen                                   |                                    Book Preview Screen                                    |
+|:------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------:|
+| <img src="assets/images/preview/search_screen.png" alt="Search Screen" width="250"/> | <img src="assets/preview/details_screen.png" alt="Details Screen" width="250"/> | <img src="assets/images/preview/book_preview.png" alt="Book Preview Screen" width="250"/> |
+
 
 ## 🏗️ Architecture & Tech Stack
 
