@@ -3,9 +3,8 @@
 
 StoryNest is a sleek and modern mobile book store application built with Flutter. It leverages the Google Books API to provide users with a seamless experience for discovering, searching, and previewing a vast collection of books. The app is designed with a clean architecture, ensuring scalability and maintainability.
 
-## Google API Link
+![Preview](assets/images/preview/preview.jpg)
 
-*   **[Google API Link](https://www.googleapis.com/books/v1/volumes?q=Programming)**
 
 ## ✨ Features
 
@@ -77,6 +76,11 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install) installed on your machine.
+
+### Google Book API
+
+*   **[Google Book API Link](https://www.googleapis.com/books/v1/volumes?q=Programming)**
+
 
 ### Installation
 
