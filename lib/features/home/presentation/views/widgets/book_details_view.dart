@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gramaz_app/features/home/data/models/book_model/book_model.dart';
-import 'package:gramaz_app/features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/book_details_view_body.dart';
+
+import '../../../data/models/book_model/book_model.dart';
+import '../../manager/similar_books_cubit/similar_books_cubit.dart';
+import 'book_details_view_body.dart';
 
 class BookDetailsView extends StatefulWidget {
   const BookDetailsView({super.key, required this.book});

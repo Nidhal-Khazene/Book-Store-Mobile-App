@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:gramaz_app/features/home/data/models/book_model/book_model.dart';
-import 'package:gramaz_app/features/home/data/repos/home_repo.dart';
 import 'package:meta/meta.dart';
 
 import '../../../../../core/errors/failures.dart';
+import '../../../data/models/book_model/book_model.dart';
+import '../../../data/repos/home_repo.dart';
 
 part 'newest_books_state.dart';
 

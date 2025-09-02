@@ -1,8 +1,9 @@
-import 'package:gramaz_app/core/utils/app_router.dart';
-import 'package:gramaz_app/core/utils/assets.dart';
-import 'package:gramaz_app/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:story_nest/features/splash/presentation/views/widgets/sliding_text.dart';
+
+import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/similar_list_view.dart';
+import 'package:story_nest/features/home/presentation/views/widgets/similar_list_view.dart';
 
 import '../../../../../core/utils/styles.dart';
 

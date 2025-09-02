@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gramaz_app/core/utils/app_router.dart';
-import 'package:gramaz_app/core/widgets/custom_error_message.dart';
-import 'package:gramaz_app/core/widgets/custom_loading_indicator.dart';
-import 'package:gramaz_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/custom_book_image.dart';
+
+import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/widgets/custom_error_message.dart';
+import '../../../../../core/widgets/custom_loading_indicator.dart';
+import '../../manager/featured_books_cubit/featured_books_cubit.dart';
+import 'custom_book_image.dart';
 
 class FeaturedListView extends StatelessWidget {
   const FeaturedListView({super.key});
@@ -23,7 +24,7 @@ class FeaturedListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.only(right: 12),
+                  padding: const EdgeInsets.only(right: 12),
                   child: GestureDetector(
                     onTap: () {
                       GoRouter.of(context).push(

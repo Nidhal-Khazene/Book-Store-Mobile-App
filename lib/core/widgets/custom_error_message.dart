@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/constants.dart';
 
+import '../../constants.dart';
 import '../utils/styles.dart';
 
 class CustomErrorMessage extends StatelessWidget {

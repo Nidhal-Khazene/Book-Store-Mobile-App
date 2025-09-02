@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/constants.dart';
-import 'package:gramaz_app/features/search/presentation/views/widgets/custom_text_field.dart';
-import 'package:gramaz_app/features/search/presentation/views/widgets/search_result_listview.dart';
+import 'package:story_nest/features/search/presentation/views/widgets/search_result_listview.dart';
 
+import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
+import 'custom_text_field.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});

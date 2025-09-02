@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gramaz_app/constants.dart';
-import 'package:gramaz_app/features/search/presentation/manager/searched_books_cubit/search_books_cubit.dart';
+
+import '../../../../../constants.dart';
+import '../../manager/searched_books_cubit/search_books_cubit.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key});

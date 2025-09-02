@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/best_seller_listview.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
+import 'best_seller_listview.dart';
 import 'custom_app_bar.dart';
 import 'featured_listview_builder.dart';
 

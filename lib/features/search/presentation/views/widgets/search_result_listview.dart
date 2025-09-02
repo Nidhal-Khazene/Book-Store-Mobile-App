@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gramaz_app/core/widgets/custom_error_message.dart';
-import 'package:gramaz_app/core/widgets/custom_loading_indicator.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/book_listview_item.dart';
-import 'package:gramaz_app/features/search/presentation/manager/searched_books_cubit/search_books_cubit.dart';
+
+import '../../../../../core/widgets/custom_error_message.dart';
+import '../../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../../home/presentation/views/widgets/book_listview_item.dart';
+import '../../manager/searched_books_cubit/search_books_cubit.dart';
 
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});

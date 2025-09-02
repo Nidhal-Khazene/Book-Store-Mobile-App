@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gramaz_app/constants.dart';
-import 'package:gramaz_app/core/utils/app_router.dart';
-import 'package:gramaz_app/core/utils/styles.dart';
-import 'package:gramaz_app/features/home/data/models/book_model/book_model.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/book_rating.dart';
-import 'package:gramaz_app/features/home/presentation/views/widgets/custom_book_image.dart';
+
+import '../../../../../constants.dart';
+import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/styles.dart';
+import '../../../data/models/book_model/book_model.dart';
+import 'book_rating.dart';
+import 'custom_book_image.dart';
 
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({super.key, required this.bookModel});

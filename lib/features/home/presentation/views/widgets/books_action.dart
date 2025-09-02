@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/constants.dart';
-import 'package:gramaz_app/core/widgets/custom_button.dart';
 
+import '../../../../../constants.dart';
 import '../../../../../core/utils/functions/custom_launcher_url.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import '../../../data/models/book_model/book_model.dart';
 
 class BooksAction extends StatelessWidget {

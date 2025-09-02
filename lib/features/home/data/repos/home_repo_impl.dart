@@ -1,9 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:gramaz_app/core/errors/failures.dart';
-import 'package:gramaz_app/core/utils/api_service.dart';
-import 'package:gramaz_app/features/home/data/models/book_model/book_model.dart';
-import 'package:gramaz_app/features/home/data/repos/home_repo.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/utils/api_service.dart';
+import '../models/book_model/book_model.dart';
+import 'home_repo.dart';
 
 class HomeRepoImplementation extends HomeRepo {
   final ApiService apiService;

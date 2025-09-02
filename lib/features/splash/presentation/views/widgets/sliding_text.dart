@@ -12,7 +12,7 @@ class SlidingText extends StatelessWidget {
       builder: (context, _) => SlideTransition(
         position: slidingAnimation,
         child: const Text(
-          "Read Free Books",
+          "Read Books",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight.w900,

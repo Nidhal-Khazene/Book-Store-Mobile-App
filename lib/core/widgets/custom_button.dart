@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gramaz_app/core/utils/styles.dart';
+
+import '../utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({

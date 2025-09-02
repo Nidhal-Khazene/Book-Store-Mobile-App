@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gramaz_app/core/utils/app_router.dart';
-import 'package:gramaz_app/core/widgets/custom_error_message.dart';
-import 'package:gramaz_app/core/widgets/custom_loading_indicator.dart';
-import 'package:gramaz_app/features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
 
+import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/widgets/custom_error_message.dart';
+import '../../../../../core/widgets/custom_loading_indicator.dart';
+import '../../manager/similar_books_cubit/similar_books_cubit.dart';
 import 'custom_book_image.dart';
 
 class SimilarListView extends StatelessWidget {
