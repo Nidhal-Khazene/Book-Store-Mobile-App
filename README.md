@@ -80,9 +80,6 @@ To get a local copy up and running, follow these simple steps.
 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install) installed on your machine.
 
-### Google Book API
-
-*   **[Google Book API Link](https://www.googleapis.com/books/v1/volumes?q=Programming)**
 
 
 ### Installation
@@ -106,6 +103,10 @@ To get a local copy up and running, follow these simple steps.
     ```sh
     flutter run
     ```
+## Google Book API
+
+*   **[Google Book API Link](https://www.googleapis.com/books/v1/volumes?q=Programming)**
+
 
 ## 📝 License
 
