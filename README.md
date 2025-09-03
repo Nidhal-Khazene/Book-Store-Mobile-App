@@ -5,6 +5,9 @@ StoryNest is a sleek and modern mobile book store application built with Flutter
 
 ![Preview](assets/images/preview/preview.jpg)
 
+## Youtube Preview
+
+*   **[Youtube](https://youtu.be/146Gby4pE78?si=YnTv1xHgvcXuqdt4)**
 
 ## ✨ Features
 
